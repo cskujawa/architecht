@@ -8,7 +8,7 @@ WORKDIR /usr/src/app
 COPY . .
 
 # Install packages
-RUN pip install --no-cache-dir uvicorn fastapi python-multipart transformers accelerate tensorflow[and-cuda] huggingface_hub
+RUN pip install --no-cache-dir uvicorn fastapi python-multipart transformers accelerate tensorflow[and-cuda] huggingface_hub python-dotenv
 
 # Make port 8000 available to the world outside this container
 EXPOSE 8000
