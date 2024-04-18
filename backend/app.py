@@ -17,9 +17,9 @@ class StringData(BaseModel):
 @app.post("/summarize/")
 async def summarize(data: StringData):
     """
-    Submit an audio file
+    Submit a piece of code
 
-    This endpoint will take an audio file, generate a transcription, determine sentiment and return both
+    This endpoint will take a piece of code and return a summary
     """
     ########################################
     # Login to HuggingFace via an Access Token https://huggingface.co/settings/tokens
