@@ -1,0 +1,17 @@
+version: '3.8'
+services:
+  architecht-api:
+    container_name: architecht-api
+    restart: unless-stopped
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend:/usr/src/app
+    networks:
+      - architecht
+    ports:
+      - "8000:8000"
+networks:
+  architecht:
+    name: architecht
