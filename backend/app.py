@@ -42,7 +42,7 @@ async def summarize(data: StringData):
     input_ids = tokenizer(code, return_tensors="pt").input_ids.to(device)
 
     # Generate the output using the length provided
-    generated_ids = model.generate(input_ids, max_length=text.length)
+    generated_ids = model.generate(input_ids, max_length=data.length)
     print("Summary:")
     print(tokenizer.decode(generated_ids[0], skip_special_tokens=True))
   
